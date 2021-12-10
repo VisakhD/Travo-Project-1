@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		325490E02761DA0A0020605E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490DF2761DA0A0020605E /* AppDelegate.swift */; };
+		325490E22761DA0A0020605E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490E12761DA0A0020605E /* SceneDelegate.swift */; };
+		325490E42761DA0A0020605E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490E32761DA0A0020605E /* ViewController.swift */; };
+		325490E72761DA0A0020605E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325490E52761DA0A0020605E /* Main.storyboard */; };
+		325490E92761DA0C0020605E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325490E82761DA0C0020605E /* Assets.xcassets */; };
+		325490EC2761DA0C0020605E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325490EA2761DA0C0020605E /* LaunchScreen.storyboard */; };
+		325490F72761DBD90020605E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490F62761DBD90020605E /* Service.swift */; };
+		325490F92761DC960020605E /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490F82761DC960020605E /* RegisterModel.swift */; };
+		325490FB2761DCD30020605E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490FA2761DCD30020605E /* RegisterViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		325490DC2761DA0A0020605E /* Travo Project 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travo Project 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		325490DF2761DA0A0020605E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		325490E12761DA0A0020605E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		325490E32761DA0A0020605E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		325490E62761DA0A0020605E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		325490E82761DA0C0020605E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		325490EB2761DA0C0020605E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		325490ED2761DA0C0020605E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325490F62761DBD90020605E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		325490F82761DC960020605E /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		325490FA2761DCD30020605E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		325490D92761DA0A0020605E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		325490D32761DA0A0020605E = {
+			isa = PBXGroup;
+			children = (
+				325490DE2761DA0A0020605E /* Travo Project 1 */,
+				325490DD2761DA0A0020605E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		325490DD2761DA0A0020605E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				325490DC2761DA0A0020605E /* Travo Project 1.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		325490DE2761DA0A0020605E /* Travo Project 1 */ = {
+			isa = PBXGroup;
+			children = (
+				325490F52761DB950020605E /* ViewModel */,
+				325490F42761DB8C0020605E /* Model */,
+				325490F32761DB800020605E /* Service */,
+				325490FC2761DCF50020605E /* Delegates */,
+				325490FD2761DD050020605E /* Controllers */,
+				325490E52761DA0A0020605E /* Main.storyboard */,
+				325490E82761DA0C0020605E /* Assets.xcassets */,
+				325490EA2761DA0C0020605E /* LaunchScreen.storyboard */,
+				325490ED2761DA0C0020605E /* Info.plist */,
+			);
+			path = "Travo Project 1";
+			sourceTree = "<group>";
+		};
+		325490F32761DB800020605E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				325490F62761DBD90020605E /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		325490F42761DB8C0020605E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				325490F82761DC960020605E /* RegisterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		325490F52761DB950020605E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				325490FA2761DCD30020605E /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		325490FC2761DCF50020605E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				325490DF2761DA0A0020605E /* AppDelegate.swift */,
+				325490E12761DA0A0020605E /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		325490FD2761DD050020605E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				325490E32761DA0A0020605E /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		325490DB2761DA0A0020605E /* Travo Project 1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325490F02761DA0C0020605E /* Build configuration list for PBXNativeTarget "Travo Project 1" */;
+			buildPhases = (
+				325490D82761DA0A0020605E /* Sources */,
+				325490D92761DA0A0020605E /* Frameworks */,
+				325490DA2761DA0A0020605E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Travo Project 1";
+			productName = "Travo Project 1";
+			productReference = 325490DC2761DA0A0020605E /* Travo Project 1.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		325490D42761DA0A0020605E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					325490DB2761DA0A0020605E = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 325490D72761DA0A0020605E /* Build configuration list for PBXProject "Travo Project 1" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 325490D32761DA0A0020605E;
+			productRefGroup = 325490DD2761DA0A0020605E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				325490DB2761DA0A0020605E /* Travo Project 1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		325490DA2761DA0A0020605E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325490EC2761DA0C0020605E /* LaunchScreen.storyboard in Resources */,
+				325490E92761DA0C0020605E /* Assets.xcassets in Resources */,
+				325490E72761DA0A0020605E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		325490D82761DA0A0020605E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325490E42761DA0A0020605E /* ViewController.swift in Sources */,
+				325490FB2761DCD30020605E /* RegisterViewModel.swift in Sources */,
+				325490F92761DC960020605E /* RegisterModel.swift in Sources */,
+				325490F72761DBD90020605E /* Service.swift in Sources */,
+				325490E02761DA0A0020605E /* AppDelegate.swift in Sources */,
+				325490E22761DA0A0020605E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		325490E52761DA0A0020605E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325490E62761DA0A0020605E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		325490EA2761DA0C0020605E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325490EB2761DA0C0020605E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		325490EE2761DA0C0020605E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		325490EF2761DA0C0020605E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		325490F12761DA0C0020605E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7DFJN69V5W;
+				INFOPLIST_FILE = "Travo Project 1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ocean.Travo-Project-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		325490F22761DA0C0020605E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7DFJN69V5W;
+				INFOPLIST_FILE = "Travo Project 1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ocean.Travo-Project-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		325490D72761DA0A0020605E /* Build configuration list for PBXProject "Travo Project 1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325490EE2761DA0C0020605E /* Debug */,
+				325490EF2761DA0C0020605E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325490F02761DA0C0020605E /* Build configuration list for PBXNativeTarget "Travo Project 1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325490F12761DA0C0020605E /* Debug */,
+				325490F22761DA0C0020605E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 325490D42761DA0A0020605E /* Project object */;
+}
