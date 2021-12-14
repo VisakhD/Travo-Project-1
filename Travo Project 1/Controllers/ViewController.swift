@@ -11,9 +11,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Service.shared.apiPost()
+       
     }
 
-
+    @IBAction func signInButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func signUpButton(_ sender: Any) {
+       
+        let homeVC = self.storyboard?.instantiateViewController(identifier: "SignInVC") as! SignInVC
+        self.navigationController?.pushViewController( homeVC, animated: true)
+    }
 }
 

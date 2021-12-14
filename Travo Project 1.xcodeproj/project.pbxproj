@@ -3,22 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322B9C782767518500357E3E /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B9C772767518500357E3E /* RegisterService.swift */; };
+		322B9C7A276751E300357E3E /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B9C79276751E300357E3E /* RegisterModel.swift */; };
+		322B9C7D276752ED00357E3E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 322B9C7C276752ED00357E3E /* Alamofire */; };
+		322B9C7F2768635A00357E3E /* SignUpOtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B9C7E2768635A00357E3E /* SignUpOtpVC.swift */; };
 		325490E02761DA0A0020605E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490DF2761DA0A0020605E /* AppDelegate.swift */; };
 		325490E22761DA0A0020605E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490E12761DA0A0020605E /* SceneDelegate.swift */; };
 		325490E42761DA0A0020605E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490E32761DA0A0020605E /* ViewController.swift */; };
 		325490E72761DA0A0020605E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325490E52761DA0A0020605E /* Main.storyboard */; };
 		325490E92761DA0C0020605E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325490E82761DA0C0020605E /* Assets.xcassets */; };
 		325490EC2761DA0C0020605E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325490EA2761DA0C0020605E /* LaunchScreen.storyboard */; };
-		325490F72761DBD90020605E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490F62761DBD90020605E /* Service.swift */; };
-		325490F92761DC960020605E /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490F82761DC960020605E /* RegisterModel.swift */; };
-		325490FB2761DCD30020605E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490FA2761DCD30020605E /* RegisterViewModel.swift */; };
+		32FE9EB3276466940016050A /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE9EB2276466940016050A /* SignInVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		322B9C772767518500357E3E /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		322B9C79276751E300357E3E /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		322B9C7E2768635A00357E3E /* SignUpOtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOtpVC.swift; sourceTree = "<group>"; };
 		325490DC2761DA0A0020605E /* Travo Project 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travo Project 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		325490DF2761DA0A0020605E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		325490E12761DA0A0020605E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,9 +32,7 @@
 		325490E82761DA0C0020605E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		325490EB2761DA0C0020605E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		325490ED2761DA0C0020605E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		325490F62761DBD90020605E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		325490F82761DC960020605E /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
-		325490FA2761DCD30020605E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		32FE9EB2276466940016050A /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322B9C7D276752ED00357E3E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +82,7 @@
 		325490F32761DB800020605E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				325490F62761DBD90020605E /* Service.swift */,
+				322B9C772767518500357E3E /* RegisterService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -86,7 +90,7 @@
 		325490F42761DB8C0020605E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				325490F82761DC960020605E /* RegisterModel.swift */,
+				322B9C79276751E300357E3E /* RegisterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,7 +98,6 @@
 		325490F52761DB950020605E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				325490FA2761DCD30020605E /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -112,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				325490E32761DA0A0020605E /* ViewController.swift */,
+				32FE9EB2276466940016050A /* SignInVC.swift */,
+				322B9C7E2768635A00357E3E /* SignUpOtpVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,6 +137,9 @@
 			dependencies = (
 			);
 			name = "Travo Project 1";
+			packageProductDependencies = (
+				322B9C7C276752ED00357E3E /* Alamofire */,
+			);
 			productName = "Travo Project 1";
 			productReference = 325490DC2761DA0A0020605E /* Travo Project 1.app */;
 			productType = "com.apple.product-type.application";
@@ -159,6 +167,9 @@
 				Base,
 			);
 			mainGroup = 325490D32761DA0A0020605E;
+			packageReferences = (
+				322B9C7B276752ED00357E3E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 325490DD2761DA0A0020605E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,11 +198,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				325490E42761DA0A0020605E /* ViewController.swift in Sources */,
-				325490FB2761DCD30020605E /* RegisterViewModel.swift in Sources */,
-				325490F92761DC960020605E /* RegisterModel.swift in Sources */,
-				325490F72761DBD90020605E /* Service.swift in Sources */,
+				32FE9EB3276466940016050A /* SignInVC.swift in Sources */,
+				322B9C7A276751E300357E3E /* RegisterModel.swift in Sources */,
 				325490E02761DA0A0020605E /* AppDelegate.swift in Sources */,
 				325490E22761DA0A0020605E /* SceneDelegate.swift in Sources */,
+				322B9C7F2768635A00357E3E /* SignUpOtpVC.swift in Sources */,
+				322B9C782767518500357E3E /* RegisterService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +405,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		322B9C7B276752ED00357E3E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		322B9C7C276752ED00357E3E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 322B9C7B276752ED00357E3E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 325490D42761DA0A0020605E /* Project object */;
 }
