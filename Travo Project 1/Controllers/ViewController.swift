@@ -15,12 +15,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func signInButton(_ sender: Any) {
+        let homeVC = self.storyboard?.instantiateViewController(identifier: "SignInVC") as! SignInVC
+        self.navigationController?.pushViewController( homeVC, animated: true)
         
     }
     
     @IBAction func signUpButton(_ sender: Any) {
        
-        let homeVC = self.storyboard?.instantiateViewController(identifier: "SignInVC") as! SignInVC
+        let homeVC = self.storyboard?.instantiateViewController(identifier: "SignUpOtpVC") as! SignUpOtpVC
         self.navigationController?.pushViewController( homeVC, animated: true)
     }
 }

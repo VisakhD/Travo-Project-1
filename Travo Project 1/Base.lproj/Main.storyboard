@@ -359,7 +359,7 @@
                                 </constraints>
                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" textContentType="tel"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1g-Ou-tJL">
                                 <rect key="frame" x="78" y="624" width="122" height="28"/>
@@ -464,10 +464,10 @@
             </objects>
             <point key="canvasLocation" x="2439.130434782609" y="71.651785714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Sign In View Controller-->
         <scene sceneID="fao-sc-Ira">
             <objects>
-                <viewController id="BJA-LS-o36" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="register2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BJA-LS-o36" customClass="OTPRegisterSignInViewController" customModule="Travo_Project_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DXw-qw-X3B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -566,6 +566,11 @@
                                 <state key="normal" title="Sent Again">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utM-O7-6oV">
                                 <rect key="frame" x="157" y="760.5" width="115" height="40"/>
@@ -578,6 +583,11 @@
                                 <state key="normal" title="Submit ">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnc-Jl-cXK">
                                 <rect key="frame" x="271" y="607" width="26" height="22"/>
@@ -1776,10 +1786,10 @@
             </objects>
             <point key="canvasLocation" x="6879.7101449275369" y="1800.6696428571427"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up OtpVC-->
         <scene sceneID="neK-up-MLu">
             <objects>
-                <viewController id="Oc7-jp-Q2w" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpOtpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oc7-jp-Q2w" customClass="SignUpOtpVC" customModule="Travo_Project_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1l2-ZH-4sQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1791,18 +1801,18 @@
                                     <constraint firstAttribute="height" constant="896" id="nzY-mg-zcj"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PhoneNumber" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Agj-i4-OlS">
-                                <rect key="frame" x="107" y="560" width="229" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PhoneNumber" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Agj-i4-OlS">
+                                <rect key="frame" x="107" y="591" width="229" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="229" id="KWe-jY-PSo"/>
                                     <constraint firstAttribute="height" constant="34" id="w6J-4z-i2k"/>
                                 </constraints>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAW-55-tGk">
-                                <rect key="frame" x="59" y="560" width="40" height="33"/>
+                                <rect key="frame" x="59" y="591.5" width="40" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Ceo-nA-LZR"/>
                                     <constraint firstAttribute="width" constant="40" id="xzS-wV-5Hn"/>
@@ -1812,7 +1822,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxY-eH-mf8">
-                                <rect key="frame" x="42" y="517" width="122" height="28"/>
+                                <rect key="frame" x="42" y="554" width="122" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="G69-aB-uft"/>
                                     <constraint firstAttribute="width" constant="122" id="zdT-z0-Nkz"/>
@@ -1821,6 +1831,21 @@
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNs-8I-RF1">
+                                <rect key="frame" x="157" y="708" width="129" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mwX-hX-Ggt"/>
+                                    <constraint firstAttribute="width" constant="129" id="zIr-DC-P4D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Send Code">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendCodeButton:" destination="Oc7-jp-Q2w" eventType="touchUpInside" id="ugk-LQ-Aa7"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo White" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-1C-G1o">
                                 <rect key="frame" x="59" y="68" width="271" height="217"/>
                                 <constraints>
@@ -1868,29 +1893,39 @@
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNs-8I-RF1">
-                                <rect key="frame" x="157" y="658" width="129" height="40"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="mwX-hX-Ggt"/>
-                                    <constraint firstAttribute="width" constant="129" id="zIr-DC-P4D"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="Send Code">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omt-XT-GHl">
+                                <rect key="frame" x="65" y="499" width="62" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="User" image="radio_unchecked">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <state key="selected" image="radio_checked"/>
+                                <connections>
+                                    <action selector="userRadioButton:" destination="Oc7-jp-Q2w" eventType="touchUpInside" id="txK-kP-MLA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMR-zF-odK">
+                                <rect key="frame" x="207" y="494" width="160" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Property Owner" image="radio_unchecked">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
+                                <state key="selected" image="radio_checked"/>
+                                <connections>
+                                    <action selector="propertyRadioButton:" destination="Oc7-jp-Q2w" eventType="touchUpInside" id="1EM-xr-1MN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iWD-pz-3tk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XAW-55-tGk" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="128.5" id="7Zo-dr-owU"/>
+                            <constraint firstItem="XAW-55-tGk" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="160" id="7Zo-dr-owU"/>
                             <constraint firstItem="rxY-eH-mf8" firstAttribute="centerX" secondItem="1l2-ZH-4sQ" secondAttribute="centerX" constant="-104" id="CVR-EM-uTX"/>
                             <constraint firstItem="0YT-5E-Kcu" firstAttribute="centerX" secondItem="1l2-ZH-4sQ" secondAttribute="centerX" constant="-58.5" id="Ccd-KF-xzW"/>
                             <constraint firstItem="CNs-8I-RF1" firstAttribute="centerX" secondItem="1l2-ZH-4sQ" secondAttribute="centerX" constant="14.5" id="CeU-Ge-h2J"/>
-                            <constraint firstItem="rxY-eH-mf8" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="83" id="IKD-mi-OXE"/>
+                            <constraint firstItem="rxY-eH-mf8" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="120" id="IKD-mi-OXE"/>
                             <constraint firstItem="zCh-kD-Sgm" firstAttribute="centerX" secondItem="1l2-ZH-4sQ" secondAttribute="centerX" constant="7.5" id="Jvh-KU-yz8"/>
-                            <constraint firstItem="CNs-8I-RF1" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="230" id="MdP-N7-clj"/>
+                            <constraint firstItem="CNs-8I-RF1" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="280" id="MdP-N7-clj"/>
                             <constraint firstItem="zCh-kD-Sgm" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="20" id="O9N-JM-b6s"/>
                             <constraint firstItem="Xau-2L-qU4" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="-108.5" id="VzZ-Kc-UjO"/>
                             <constraint firstAttribute="bottom" secondItem="KSO-k8-dX9" secondAttribute="bottom" id="fv4-Im-GND"/>
@@ -1902,21 +1937,26 @@
                             <constraint firstItem="4fd-1C-G1o" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="-271.5" id="uFf-mY-TD1"/>
                             <constraint firstItem="KSO-k8-dX9" firstAttribute="top" secondItem="1l2-ZH-4sQ" secondAttribute="top" id="uUi-xL-AIb"/>
                             <constraint firstItem="oDz-jc-mKA" firstAttribute="centerX" secondItem="1l2-ZH-4sQ" secondAttribute="centerX" constant="3" id="vBE-Sb-w5i"/>
-                            <constraint firstItem="Agj-i4-OlS" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="129" id="x1v-2Z-pZg"/>
+                            <constraint firstItem="Agj-i4-OlS" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="160" id="x1v-2Z-pZg"/>
                             <constraint firstItem="Agj-i4-OlS" firstAttribute="centerX" secondItem="1l2-ZH-4sQ" secondAttribute="centerX" constant="14.5" id="yQc-au-eCJ"/>
                             <constraint firstItem="oDz-jc-mKA" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="-22" id="z3Z-7j-weF"/>
                             <constraint firstItem="0YT-5E-Kcu" firstAttribute="centerY" secondItem="1l2-ZH-4sQ" secondAttribute="centerY" constant="-63.5" id="zsK-8c-fKf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="phoneNumberTextField" destination="Agj-i4-OlS" id="Uqv-GW-Uud"/>
+                        <outlet property="propertyOwner" destination="kMR-zF-odK" id="0GG-IP-145"/>
+                        <outlet property="userButton" destination="omt-XT-GHl" id="uxN-17-FSv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgB-wZ-48j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1585.5072463768117" y="867.85714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Sign Up View Controller-->
         <scene sceneID="BR5-CI-JJh">
             <objects>
-                <viewController id="oNZ-JR-IN7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="register" id="oNZ-JR-IN7" customClass="OTPRegisterSignUpViewController" customModule="Travo_Project_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iuf-3Y-ykK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2015,6 +2055,11 @@
                                 <state key="normal" title="Submit ">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nly-nx-ggQ">
                                 <rect key="frame" x="297" y="621" width="26" height="22"/>
@@ -2039,6 +2084,11 @@
                                 <state key="normal" title="Sent Again">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZxX-dh-j1z"/>

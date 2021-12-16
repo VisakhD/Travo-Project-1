@@ -16,18 +16,11 @@ struct RegisterModel: Encodable {
 
 struct RespondsModel : Decodable {
     let message : String?
-    let user : User?
+    let _id : String?
     
 }
-struct User : Decodable {
-    let mobileNumber : String?
-    let following : [String]?
-    let followers : [String]?
-    let _id : String?
-    let createdAt : String?
-    let updatedAt : String?
-    let __v : Int?
-}
+
+
 
 
 

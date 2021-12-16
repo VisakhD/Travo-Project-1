@@ -8,71 +8,110 @@
 import UIKit
 
 class SignInVC: UIViewController {
-
+    var strValue : String = ""
+    var phoneNumber : String = ""
+    var postMessage :String?
+    let confirmNavsucess = "saved successfully and otp had sent"
+    let confirmNavFailed = "Number already exists"
     @IBOutlet weak var userButton: UIButton!
     @IBOutlet weak var propertyButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var phoneNumbTextField: UITextField!
     
-    var selected : String?
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
        customTextField()
+        RegisterService.sharedInstance.delegate = self
         // Do any additional setup after loading the view.
     }
-  
+    
+//MARK:- MOBILE NUMBER VALIDATION
+    
+    func validation () -> Bool? {
+        phoneNumber  = phoneNumbTextField.text!
+        let count = phoneNumber.count
+        if count == 10 {
+            print("validation sucess")
+            return true
+        }else{
+            print(" validation error")
+            return false
+        }
+    }
 //MARK:-  RADIO BUTTON IN SIGNIN PAGE
     
 //    radio button function for these button implemented
-    @IBAction func userRadioButton(_ sender: UIButton) {
-        if sender.isSelected{
-            sender.isSelected = false
-            propertyButton.isSelected = false
-            selected = "nil"
-        } else {
-            sender.isSelected = true
-            propertyButton.isSelected = false
-            selected = "user"
+    
+    func setUser (isUser : Bool){
+        if isUser{
+            strValue = "user"
+            userButton.setImage(UIImage(named: "radio_checked"), for: .normal)
+            propertyButton.setImage(UIImage(named: "radio_unchecked"), for: .normal)
+        }else {
+            strValue = "propertyowner"
+            propertyButton.setImage(UIImage(named: "radio_checked"), for: .normal)
+            userButton.setImage(UIImage(named: "radio_unchecked"), for: .normal)
         }
-        
+    }
+    @IBAction func userRadioButton(_ sender: UIButton) {
+        setUser(isUser: true)
     }
     @IBAction func propertyRadioButton(_ sender: UIButton) {
-        if sender.isSelected{
-            sender.isSelected = false
-            userButton.isSelected = false
-            selected = "nil"
-        }else {
-            sender.isSelected = true
-            userButton.isSelected = false
-            selected = "property"
-        }
+
+        setUser(isUser: false)
     }
+//MARK:- OTP SENDING API FUNCTION
     
-    @IBAction func signInButton(_ sender: Any) {
+    @IBAction func otpCodeButton(_ sender: Any) {
+        let phoneNumb = validation()
+        if phoneNumb == true {
+            if strValue == "user"{
+                print("User")
+                RegisterService.sharedInstance.callingApiPost(register: RegisterModel.init(sign_up_by: strValue, mobileNumber: phoneNumber))
+            }
+            else if strValue == "property"{
+                print("Property")
+                RegisterService.sharedInstance.callingApiPost(register: RegisterModel.init(sign_up_by: strValue, mobileNumber: phoneNumber))
+            }
+            else if strValue == ""{
+                showAlertError()
+            }
+        }else {
+            alertErrorPhoneNumber()
+        }
         
     }
-    @IBAction func otpCodeButton(_ sender: Any) {
-        if selected == "user"{
-            print("User")
-        }
-        else if selected == "property"{
-            print("Property")
-        }
-        else if selected == "nil"{
-            print("error")
-        }
-        let num : String =  phoneNumbTextField.text ?? ""
-        RegisterService.sharedInstance.callingApiPost(register: RegisterModel.init(sign_up_by: selected, mobileNumber: num))
+    @IBAction func signInButton(_ sender: Any) {
         
     }
     @IBAction func forgotPasswordButton(_ sender: Any) {
         
     }
     @IBAction func signUpButton(_ sender: Any) {
+        let signUpVC = self.storyboard?.instantiateViewController(identifier: "SignUpOtpVC") as! SignUpOtpVC
+        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
+// MARK:- ALERT FUNCTION FOR ERRORS
+    
+    func showAlertError(){
+        let  alert = UIAlertController(title: "Error", message: "Choose USER or PROPERTY OWNER", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { action in
+            print("user or property owner is not selected")
+        }))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func alertErrorPhoneNumber() {
+        let alert = UIAlertController(title: "Error", message: "Please Enter 10 Digits Phone Number", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
+            print("user or property owner is not selected")
+        }))
+        present(alert, animated: true, completion: nil)
+    }
     
     
 //MARK:- CUSTOM TEXT FIELD
@@ -80,17 +119,15 @@ class SignInVC: UIViewController {
    
     func customTextField() {
         
-        let caObj = CALayer()
-        
-//        let phoneLine  = caObj
-//        let emailLine  = caObj
-//        let passwordLine = caObj
-        caObj.frame = CGRect(x: 0, y: phoneNumbTextField.frame.height, width: phoneNumbTextField.frame.width, height: 2)
-        caObj.backgroundColor = UIColor.black.cgColor
-        caObj.frame = CGRect(x: 0, y: emailTextField.frame.height, width: 278, height: 2)
-        caObj.backgroundColor = UIColor.black.cgColor
-        caObj.frame = CGRect(x: 0, y: passwordTextField.frame.height, width: 278, height: 2)
-        caObj.backgroundColor = UIColor.black.cgColor
+        let phoneLine  = CALayer()
+        let emailLine  = CALayer()
+        let passwordLine = CALayer()
+        phoneLine.frame = CGRect(x: 0, y: phoneNumbTextField.frame.height, width: phoneNumbTextField.frame.width, height: 2)
+        phoneLine.backgroundColor = UIColor.black.cgColor
+        emailLine.frame = CGRect(x: 0, y: emailTextField.frame.height, width: 278, height: 2)
+        emailLine.backgroundColor = UIColor.black.cgColor
+        passwordLine.frame = CGRect(x: 0, y: passwordTextField.frame.height, width: 278, height: 2)
+        passwordLine.backgroundColor = UIColor.black.cgColor
 //        Remove textField border
         
         phoneNumbTextField.borderStyle = .none
@@ -99,10 +136,38 @@ class SignInVC: UIViewController {
         
 //        add line to the text field
         
-        phoneNumbTextField.layer.addSublayer(caObj)
-        emailTextField.layer.addSublayer(caObj)
-        passwordTextField.layer.addSublayer(caObj)
+        phoneNumbTextField.layer.addSublayer(phoneLine)
+        emailTextField.layer.addSublayer(emailLine)
+        passwordTextField.layer.addSublayer(passwordLine)
     }
     
+// MARK:- NAVIGATE TO NEXT VIEW CONTROLLER
     
+    func navAuth(){
+        if postMessage == confirmNavsucess{
+            let regVC = storyboard?.instantiateViewController(identifier: "register2")  as! OTPRegisterSignInViewController
+            self.navigationController?.pushViewController(regVC, animated: true)
+            
+        }else if postMessage == confirmNavFailed{
+            alertErrorNumberExist()
+        }else{
+            return
+        }
+        
+        
+        func alertErrorNumberExist() {
+            let alert = UIAlertController(title: "Error", message: "Number already exists", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
+                print("user or property owner is not selected")
+            }))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+}
+extension SignInVC : PostResponse {
+    func message(message: String?) {
+        postMessage = message!
+        navAuth()
+    }
 }

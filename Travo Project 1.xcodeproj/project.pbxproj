@@ -17,6 +17,9 @@
 		325490E72761DA0A0020605E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325490E52761DA0A0020605E /* Main.storyboard */; };
 		325490E92761DA0C0020605E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325490E82761DA0C0020605E /* Assets.xcassets */; };
 		325490EC2761DA0C0020605E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325490EA2761DA0C0020605E /* LaunchScreen.storyboard */; };
+		3260146D276B6714007276C7 /* OTPRegisterSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3260146C276B6714007276C7 /* OTPRegisterSignUpViewController.swift */; };
+		3260146F276B749E007276C7 /* OTPRegisterSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3260146E276B749E007276C7 /* OTPRegisterSignInViewController.swift */; };
+		32601473276BAD7B007276C7 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32601472276BAD7B007276C7 /* Manager.swift */; };
 		32FE9EB3276466940016050A /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE9EB2276466940016050A /* SignInVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 		325490E82761DA0C0020605E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		325490EB2761DA0C0020605E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		325490ED2761DA0C0020605E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3260146C276B6714007276C7 /* OTPRegisterSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRegisterSignUpViewController.swift; sourceTree = "<group>"; };
+		3260146E276B749E007276C7 /* OTPRegisterSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRegisterSignInViewController.swift; sourceTree = "<group>"; };
+		32601472276BAD7B007276C7 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		32FE9EB2276466940016050A /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,10 +72,11 @@
 		325490DE2761DA0A0020605E /* Travo Project 1 */ = {
 			isa = PBXGroup;
 			children = (
+				325490FC2761DCF50020605E /* Delegates */,
 				325490F52761DB950020605E /* ViewModel */,
 				325490F42761DB8C0020605E /* Model */,
 				325490F32761DB800020605E /* Service */,
-				325490FC2761DCF50020605E /* Delegates */,
+				32601471276B7BB1007276C7 /* DataBase */,
 				325490FD2761DD050020605E /* Controllers */,
 				325490E52761DA0A0020605E /* Main.storyboard */,
 				325490E82761DA0C0020605E /* Assets.xcassets */,
@@ -117,8 +124,26 @@
 				325490E32761DA0A0020605E /* ViewController.swift */,
 				32FE9EB2276466940016050A /* SignInVC.swift */,
 				322B9C7E2768635A00357E3E /* SignUpOtpVC.swift */,
+				32601470276B7607007276C7 /* OTP Register Controller */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		32601470276B7607007276C7 /* OTP Register Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3260146C276B6714007276C7 /* OTPRegisterSignUpViewController.swift */,
+				3260146E276B749E007276C7 /* OTPRegisterSignInViewController.swift */,
+			);
+			path = "OTP Register Controller";
+			sourceTree = "<group>";
+		};
+		32601471276B7BB1007276C7 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				32601472276BAD7B007276C7 /* Manager.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +227,11 @@
 				322B9C7A276751E300357E3E /* RegisterModel.swift in Sources */,
 				325490E02761DA0A0020605E /* AppDelegate.swift in Sources */,
 				325490E22761DA0A0020605E /* SceneDelegate.swift in Sources */,
+				3260146D276B6714007276C7 /* OTPRegisterSignUpViewController.swift in Sources */,
+				3260146F276B749E007276C7 /* OTPRegisterSignInViewController.swift in Sources */,
 				322B9C7F2768635A00357E3E /* SignUpOtpVC.swift in Sources */,
 				322B9C782767518500357E3E /* RegisterService.swift in Sources */,
+				32601473276BAD7B007276C7 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

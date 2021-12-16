@@ -8,8 +8,16 @@
 import Foundation
 import Alamofire
 
+protocol PostResponse {
+    func message(message:String?)
+}
+
 class RegisterService {
+    var delegate : PostResponse?
+    
+    
     static let sharedInstance = RegisterService()
+    
     func callingApiPost(register : RegisterModel) {
         
         AF.request("https://travosocialmedia.herokuapp.com/api/auth/signup", method: .post, parameters: register , encoder: JSONParameterEncoder.default).responseJSON { (responds) in
@@ -17,15 +25,22 @@ class RegisterService {
             case .success(let message) :
                 if let JSON = message as? [String: Any] {
                     let message = JSON["message"] as! String
+                    self.delegate?.message(message: message)
                     print(message)
+                    
                 }
             case .failure(let Error): return
                 print(Error)
             }
+            
+            
         }
+        
     }
     
 }
 
-
+class RegisterDetailsService {
+    
+}
 
