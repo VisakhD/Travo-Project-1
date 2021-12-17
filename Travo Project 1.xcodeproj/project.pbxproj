@@ -20,6 +20,8 @@
 		3260146D276B6714007276C7 /* OTPRegisterSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3260146C276B6714007276C7 /* OTPRegisterSignUpViewController.swift */; };
 		3260146F276B749E007276C7 /* OTPRegisterSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3260146E276B749E007276C7 /* OTPRegisterSignInViewController.swift */; };
 		32601473276BAD7B007276C7 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32601472276BAD7B007276C7 /* Manager.swift */; };
+		32601476276C478B007276C7 /* TravoProject1Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32601474276C478B007276C7 /* TravoProject1Model.xcdatamodeld */; };
+		32601479276C6A62007276C7 /* SignUpDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32601478276C6A62007276C7 /* SignUpDetailsViewController.swift */; };
 		32FE9EB3276466940016050A /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE9EB2276466940016050A /* SignInVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		3260146C276B6714007276C7 /* OTPRegisterSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRegisterSignUpViewController.swift; sourceTree = "<group>"; };
 		3260146E276B749E007276C7 /* OTPRegisterSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRegisterSignInViewController.swift; sourceTree = "<group>"; };
 		32601472276BAD7B007276C7 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		32601475276C478B007276C7 /* TravoProject1Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravoProject1Model.xcdatamodel; sourceTree = "<group>"; };
+		32601478276C6A62007276C7 /* SignUpDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetailsViewController.swift; sourceTree = "<group>"; };
 		32FE9EB2276466940016050A /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,15 +77,14 @@
 			isa = PBXGroup;
 			children = (
 				325490FC2761DCF50020605E /* Delegates */,
-				325490F52761DB950020605E /* ViewModel */,
 				325490F42761DB8C0020605E /* Model */,
 				325490F32761DB800020605E /* Service */,
 				32601471276B7BB1007276C7 /* DataBase */,
 				325490FD2761DD050020605E /* Controllers */,
-				325490E52761DA0A0020605E /* Main.storyboard */,
+				32601477276C47D0007276C7 /* StoryBoard */,
 				325490E82761DA0C0020605E /* Assets.xcassets */,
-				325490EA2761DA0C0020605E /* LaunchScreen.storyboard */,
 				325490ED2761DA0C0020605E /* Info.plist */,
+				32601474276C478B007276C7 /* TravoProject1Model.xcdatamodeld */,
 			);
 			path = "Travo Project 1";
 			sourceTree = "<group>";
@@ -102,13 +105,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		325490F52761DB950020605E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		325490FC2761DCF50020605E /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +120,7 @@
 				325490E32761DA0A0020605E /* ViewController.swift */,
 				32FE9EB2276466940016050A /* SignInVC.swift */,
 				322B9C7E2768635A00357E3E /* SignUpOtpVC.swift */,
+				32601478276C6A62007276C7 /* SignUpDetailsViewController.swift */,
 				32601470276B7607007276C7 /* OTP Register Controller */,
 			);
 			path = Controllers;
@@ -144,6 +141,15 @@
 				32601472276BAD7B007276C7 /* Manager.swift */,
 			);
 			path = DataBase;
+			sourceTree = "<group>";
+		};
+		32601477276C47D0007276C7 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				325490EA2761DA0C0020605E /* LaunchScreen.storyboard */,
+				325490E52761DA0A0020605E /* Main.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,11 +232,13 @@
 				32FE9EB3276466940016050A /* SignInVC.swift in Sources */,
 				322B9C7A276751E300357E3E /* RegisterModel.swift in Sources */,
 				325490E02761DA0A0020605E /* AppDelegate.swift in Sources */,
+				32601476276C478B007276C7 /* TravoProject1Model.xcdatamodeld in Sources */,
 				325490E22761DA0A0020605E /* SceneDelegate.swift in Sources */,
 				3260146D276B6714007276C7 /* OTPRegisterSignUpViewController.swift in Sources */,
 				3260146F276B749E007276C7 /* OTPRegisterSignInViewController.swift in Sources */,
 				322B9C7F2768635A00357E3E /* SignUpOtpVC.swift in Sources */,
 				322B9C782767518500357E3E /* RegisterService.swift in Sources */,
+				32601479276C6A62007276C7 /* SignUpDetailsViewController.swift in Sources */,
 				32601473276BAD7B007276C7 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +460,19 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		32601474276C478B007276C7 /* TravoProject1Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				32601475276C478B007276C7 /* TravoProject1Model.xcdatamodel */,
+			);
+			currentVersion = 32601475276C478B007276C7 /* TravoProject1Model.xcdatamodel */;
+			path = TravoProject1Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 325490D42761DA0A0020605E /* Project object */;
 }

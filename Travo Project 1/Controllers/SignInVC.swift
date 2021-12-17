@@ -166,7 +166,7 @@ class SignInVC: UIViewController {
     
 }
 extension SignInVC : PostResponse {
-    func message(message: String?) {
+    func message(message: String?, id: String?) {
         postMessage = message!
         navAuth()
     }

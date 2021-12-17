@@ -14,6 +14,7 @@ class SignUpOtpVC: UIViewController {
     var postMessage :String?
     let confirmNavsucess = "saved successfully and otp had sent"
     let confirmNavFailed = "Number already exists"
+    
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var userButton: UIButton!
     @IBOutlet weak var propertyOwner: UIButton!
@@ -126,6 +127,7 @@ class SignUpOtpVC: UIViewController {
         if postMessage == confirmNavsucess{
             let regVC = storyboard?.instantiateViewController(identifier: "register")  as! OTPRegisterSignUpViewController
             self.navigationController?.pushViewController(regVC, animated: true)
+           
             
         }else if postMessage == confirmNavFailed{
             alertErrorNumberExist()
@@ -145,7 +147,8 @@ class SignUpOtpVC: UIViewController {
 }
 
 extension SignUpOtpVC : PostResponse{
-    func message(message: String?) {
+
+    func message(message: String?,id: String?) {
         postMessage = message!
         navAuth()
     }
