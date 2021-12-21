@@ -34,14 +34,37 @@ struct RegisterDetailsModel : Codable {
 
 struct RegisterDetailsResponds : Codable {
     let token : String?
-    let user : User?
+    let user : UserDet?
 }
-
-struct User : Codable {
+//changed the User name into userdet if error shots check this area
+struct UserDet : Codable {
     let mobileNumber : String?
     let following : [String]?
     let followers : [String]?
     let email : String?
     let user_name : String?
     let name : String?
+}
+
+//MARK:- SIGN IN MODEL FOR SENTING SIGNIN DETAILS
+
+struct SignInInfo : Codable {
+    let email : String?
+    let password : String?
+
+}
+
+struct SignInResponds : Codable {
+    let token : String?
+    let user : UserDt?
+}
+
+struct UserDt : Codable {
+    let mobileNumber : String?
+    let following : [String]?
+    let followers : [String]?
+    let email : String?
+    let user_name : String?
+    let name : String?
+    let _id : String?
 }

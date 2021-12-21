@@ -84,9 +84,19 @@ class SignInVC: UIViewController {
         }
         
     }
-    @IBAction func signInButton(_ sender: Any) {
+    
+    @IBAction func signInButton(_ sender: UIButton) {
+        let signInEmail = emailTextField.text
+        let signInPassword = passwordTextField.text
         
+        if signInEmail != nil && signInPassword != nil {
+            let data = SignInInfo.init(email: signInEmail, password: signInPassword)
+            RegisterService.sharedInstance.postSignIn(data: data)
+        }else {
+            print("The sign up id done properly")
+        }
     }
+    
     @IBAction func forgotPasswordButton(_ sender: Any) {
         
     }

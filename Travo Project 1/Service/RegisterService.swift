@@ -51,6 +51,20 @@ class RegisterService {
             }
         }
     }
+    func postSignIn(data : SignInInfo ) {
+        AF.request("https://travosocialmedia.herokuapp.com/api/auth/signin", method: .post, parameters: data, encoder: JSONParameterEncoder.default).responseJSON { (respondsData) in
+            switch respondsData.result {
+            case.success(let message) :
+                if let JSON = message as? [String : Any] {
+                    let  id = JSON["_id"] as! String
+                    print("sigIn Sucess\(id)")
+                }
+            case.failure(let error): return
+                print(error)
+            }
+        }
+    }
+    
 }
 
 
