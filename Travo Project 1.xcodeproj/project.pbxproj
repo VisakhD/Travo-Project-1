@@ -11,6 +11,8 @@
 		322B9C7A276751E300357E3E /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B9C79276751E300357E3E /* RegisterModel.swift */; };
 		322B9C7D276752ED00357E3E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 322B9C7C276752ED00357E3E /* Alamofire */; };
 		322B9C7F2768635A00357E3E /* SignUpOtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B9C7E2768635A00357E3E /* SignUpOtpVC.swift */; };
+		323D115427718EC400C142E2 /* UserDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D115227718EC400C142E2 /* UserDetails+CoreDataClass.swift */; };
+		323D115527718EC400C142E2 /* UserDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D115327718EC400C142E2 /* UserDetails+CoreDataProperties.swift */; };
 		325490E02761DA0A0020605E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490DF2761DA0A0020605E /* AppDelegate.swift */; };
 		325490E22761DA0A0020605E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490E12761DA0A0020605E /* SceneDelegate.swift */; };
 		325490E42761DA0A0020605E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325490E32761DA0A0020605E /* ViewController.swift */; };
@@ -22,6 +24,7 @@
 		32601473276BAD7B007276C7 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32601472276BAD7B007276C7 /* Manager.swift */; };
 		32601476276C478B007276C7 /* TravoProject1Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32601474276C478B007276C7 /* TravoProject1Model.xcdatamodeld */; };
 		32601479276C6A62007276C7 /* SignUpDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32601478276C6A62007276C7 /* SignUpDetailsViewController.swift */; };
+		32AD9D1F276DB74600B9E2D1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD9D1E276DB74600B9E2D1 /* Helper.swift */; };
 		32FE9EB3276466940016050A /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE9EB2276466940016050A /* SignInVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,8 @@
 		322B9C772767518500357E3E /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		322B9C79276751E300357E3E /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		322B9C7E2768635A00357E3E /* SignUpOtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOtpVC.swift; sourceTree = "<group>"; };
+		323D115227718EC400C142E2 /* UserDetails+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
+		323D115327718EC400C142E2 /* UserDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		325490DC2761DA0A0020605E /* Travo Project 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travo Project 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		325490DF2761DA0A0020605E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		325490E12761DA0A0020605E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		32601472276BAD7B007276C7 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		32601475276C478B007276C7 /* TravoProject1Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravoProject1Model.xcdatamodel; sourceTree = "<group>"; };
 		32601478276C6A62007276C7 /* SignUpDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetailsViewController.swift; sourceTree = "<group>"; };
+		32AD9D1E276DB74600B9E2D1 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		32FE9EB2276466940016050A /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +91,7 @@
 				325490E82761DA0C0020605E /* Assets.xcassets */,
 				325490ED2761DA0C0020605E /* Info.plist */,
 				32601474276C478B007276C7 /* TravoProject1Model.xcdatamodeld */,
+				32AD9D1E276DB74600B9E2D1 /* Helper.swift */,
 			);
 			path = "Travo Project 1";
 			sourceTree = "<group>";
@@ -138,6 +145,8 @@
 		32601471276B7BB1007276C7 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				323D115227718EC400C142E2 /* UserDetails+CoreDataClass.swift */,
+				323D115327718EC400C142E2 /* UserDetails+CoreDataProperties.swift */,
 				32601472276BAD7B007276C7 /* Manager.swift */,
 			);
 			path = DataBase;
@@ -236,8 +245,11 @@
 				325490E22761DA0A0020605E /* SceneDelegate.swift in Sources */,
 				3260146D276B6714007276C7 /* OTPRegisterSignUpViewController.swift in Sources */,
 				3260146F276B749E007276C7 /* OTPRegisterSignInViewController.swift in Sources */,
+				323D115527718EC400C142E2 /* UserDetails+CoreDataProperties.swift in Sources */,
 				322B9C7F2768635A00357E3E /* SignUpOtpVC.swift in Sources */,
 				322B9C782767518500357E3E /* RegisterService.swift in Sources */,
+				32AD9D1F276DB74600B9E2D1 /* Helper.swift in Sources */,
+				323D115427718EC400C142E2 /* UserDetails+CoreDataClass.swift in Sources */,
 				32601479276C6A62007276C7 /* SignUpDetailsViewController.swift in Sources */,
 				32601473276BAD7B007276C7 /* Manager.swift in Sources */,
 			);

@@ -12,6 +12,7 @@ class SignUpOtpVC: UIViewController {
     var strVal : String = ""
     var phoneNumber : String = ""
     var postMessage :String?
+    var signUpId : String = ""
     let confirmNavsucess = "saved successfully and otp had sent"
     let confirmNavFailed = "Number already exists"
     
@@ -123,11 +124,12 @@ class SignUpOtpVC: UIViewController {
     //MARK:- NAVIGATION TO NEXT CONTROLLER
     
     func navAuth() {
-
+        
         if postMessage == confirmNavsucess{
             let regVC = storyboard?.instantiateViewController(identifier: "register")  as! OTPRegisterSignUpViewController
             self.navigationController?.pushViewController(regVC, animated: true)
-           
+            regVC.sigUpIdData = signUpId
+            
             
         }else if postMessage == confirmNavFailed{
             alertErrorNumberExist()
@@ -150,6 +152,7 @@ extension SignUpOtpVC : PostResponse{
 
     func message(message: String?,id: String?) {
         postMessage = message!
+        signUpId = id!
         navAuth()
     }
 }

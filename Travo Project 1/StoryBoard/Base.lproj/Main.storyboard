@@ -744,7 +744,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRb-g5-BFh">
-                                <rect key="frame" x="142.66666666666666" y="688" width="128.99999999999997" height="40"/>
+                                <rect key="frame" x="142.66666666666666" y="708" width="128.99999999999997" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="6fm-1G-hdw"/>
@@ -764,7 +764,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvn-tX-bz9">
-                                <rect key="frame" x="0.0" y="125.66666666666669" width="102" height="45"/>
+                                <rect key="frame" x="11" y="125.66666666666669" width="102" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="46Y-vh-77A"/>
                                     <constraint firstAttribute="width" constant="102" id="GMc-G8-hfQ"/>
@@ -774,14 +774,14 @@
                                 <color key="highlightedColor" systemColor="labelColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo White" translatesAutoresizingMaskIntoConstraints="NO" id="jHz-bU-woV">
-                                <rect key="frame" x="0.0" y="57.666666666666657" width="102" height="81"/>
+                                <rect key="frame" x="11" y="57.666666666666657" width="102" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="81" id="9f8-uW-FeH"/>
                                     <constraint firstAttribute="width" constant="102" id="dgs-ve-Kac"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEd-eb-dBm">
-                                <rect key="frame" x="56" y="166" width="152" height="51"/>
+                                <rect key="frame" x="56" y="182.66666666666666" width="152" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="73w-mx-cyE"/>
                                     <constraint firstAttribute="width" constant="152" id="Eeq-kT-9Hp"/>
@@ -791,7 +791,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are waiting for you ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeW-yC-BGk">
-                                <rect key="frame" x="66" y="212" width="232" height="21"/>
+                                <rect key="frame" x="66" y="222.66666666666666" width="232" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="43j-Ly-Ggz"/>
                                     <constraint firstAttribute="width" constant="232" id="s7h-Lm-Sce"/>
@@ -801,7 +801,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in and start your Trip with us" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVt-tF-EuT">
-                                <rect key="frame" x="64" y="241" width="288" height="21"/>
+                                <rect key="frame" x="64" y="247.66666666666663" width="288" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="UK8-IR-eoc"/>
                                     <constraint firstAttribute="height" constant="21" id="sgX-PZ-FCG"/>
@@ -827,9 +827,9 @@
                             <constraint firstItem="Ztu-jE-RIx" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" id="1F2-GN-035"/>
                             <constraint firstItem="4jF-8e-FSs" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="-113" id="3t7-69-2NE"/>
                             <constraint firstItem="6PK-Hn-zHG" firstAttribute="trailing" secondItem="DY3-2z-Wue" secondAttribute="trailing" id="7mt-t4-4RT"/>
-                            <constraint firstItem="lvn-tX-bz9" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="-156" id="8eM-a8-Z2B"/>
+                            <constraint firstItem="lvn-tX-bz9" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="-145" id="8eM-a8-Z2B"/>
                             <constraint firstItem="pvs-0y-GBW" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="-80.5" id="BYA-e5-N9S"/>
-                            <constraint firstItem="jHz-bU-woV" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="-156" id="DJv-c3-Soh"/>
+                            <constraint firstItem="jHz-bU-woV" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="-145" id="DJv-c3-Soh"/>
                             <constraint firstItem="lvn-tX-bz9" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="-300" id="DiI-w1-BrO"/>
                             <constraint firstItem="6bT-yX-e1C" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="-28" id="DzO-bU-X03"/>
                             <constraint firstItem="6PK-Hn-zHG" firstAttribute="leading" secondItem="DY3-2z-Wue" secondAttribute="leading" id="Oe2-9O-JbO"/>
@@ -841,25 +841,25 @@
                             <constraint firstItem="S2r-dD-eUI" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="-55.5" id="YmN-nd-vjW"/>
                             <constraint firstItem="IWv-Ry-WM4" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="-127.5" id="ZCZ-fm-1vK"/>
                             <constraint firstItem="PRb-g5-BFh" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" id="ZE6-5X-uib"/>
-                            <constraint firstItem="xeW-yC-BGk" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="-225.5" id="Zxf-q7-7Uj"/>
+                            <constraint firstItem="xeW-yC-BGk" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="-215" id="Zxf-q7-7Uj"/>
                             <constraint firstAttribute="bottom" secondItem="6PK-Hn-zHG" secondAttribute="bottom" id="fea-aR-Nh2"/>
                             <constraint firstItem="jHz-bU-woV" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="-350" id="ffX-qZ-NBO"/>
                             <constraint firstItem="4jF-8e-FSs" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="89.5" id="nEu-xi-p6b"/>
                             <constraint firstItem="9mo-ii-2v9" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="-105" id="nUs-CL-Vq0"/>
                             <constraint firstItem="Vrv-7Z-sr2" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="-129.5" id="p62-6H-Igc"/>
-                            <constraint firstItem="PRb-g5-BFh" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="260" id="q1b-r6-69V"/>
+                            <constraint firstItem="PRb-g5-BFh" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="280" id="q1b-r6-69V"/>
                             <constraint firstItem="aW4-CS-udb" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" id="qde-PX-Jo8"/>
                             <constraint firstItem="9mo-ii-2v9" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" id="r1A-xX-Ml3"/>
                             <constraint firstItem="pvs-0y-GBW" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="167.5" id="rFZ-h8-iax"/>
                             <constraint firstItem="CEd-eb-dBm" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="-75" id="rc9-hX-455"/>
                             <constraint firstItem="xeW-yC-BGk" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="-25" id="rx9-jc-SIr"/>
-                            <constraint firstItem="CEd-eb-dBm" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="-256.5" id="uLx-ZF-aT7"/>
+                            <constraint firstItem="CEd-eb-dBm" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="-240" id="uLx-ZF-aT7"/>
                             <constraint firstItem="S76-Jt-Rzf" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" id="uNE-0M-Xhk"/>
                             <constraint firstItem="CVt-tF-EuT" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="1" id="uUk-CW-weX"/>
                             <constraint firstItem="6PK-Hn-zHG" firstAttribute="top" secondItem="iDe-TX-ETG" secondAttribute="top" id="udH-US-JXY"/>
                             <constraint firstItem="S2r-dD-eUI" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" constant="-110.5" id="uuy-8f-ajC"/>
                             <constraint firstItem="6bT-yX-e1C" firstAttribute="centerX" secondItem="iDe-TX-ETG" secondAttribute="centerX" id="whw-Gh-1Qg"/>
-                            <constraint firstItem="CVt-tF-EuT" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="-196.5" id="zcP-Qu-NCU"/>
+                            <constraint firstItem="CVt-tF-EuT" firstAttribute="centerY" secondItem="iDe-TX-ETG" secondAttribute="centerY" constant="-190" id="zcP-Qu-NCU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1976,6 +1976,11 @@
                                 <state key="normal" title="Send Code">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendCodeButton:" destination="Oc7-jp-Q2w" eventType="touchUpInside" id="ugk-LQ-Aa7"/>
                                 </connections>
