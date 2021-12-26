@@ -10,7 +10,7 @@ import UIKit
 
 class SignUpDetailsViewController: UIViewController {
     var signUpId : String = ""
-    
+    weak var rootDelgate : RootSwitching?
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -20,7 +20,7 @@ class SignUpDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customTextFlied()
-        
+        rootDelgate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
         // Do any additional setup after loading the view.
     }
     
@@ -34,9 +34,14 @@ class SignUpDetailsViewController: UIViewController {
         let confirmPassword = confirmPasswordTextField.text!
         let id = signUpId
         
+        if password == confirmPassword {
      let reg =   RegisterDetailsModel.init(name: name, user_name: username, userId: id, email: email, password: password)
-        
         RegisterService.sharedInstance.postApiDetails(registerDetails: reg)
+        
+        rootDelgate?.loginSucceed()
+        }else {
+            alertErrorNumberExist()
+        }
     }
     
 //MARK:- CUSTOM TEXT FIELD CODE
@@ -84,6 +89,13 @@ class SignUpDetailsViewController: UIViewController {
             confirmPasswordTextField.layer.addSublayer(confirmPasswordFieldLine)
     }
     
+    func alertErrorNumberExist() {
+        let alert = UIAlertController(title: "Error", message: "Password Does Not Match", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
+            print("password and confirm password doesnot match")
+        }))
+        present(alert, animated: true, completion: nil)
+    }
     
     
 }

@@ -11,8 +11,10 @@ class SignInVC: UIViewController {
     var strValue : String = ""
     var phoneNumber : String = ""
     var postMessage :String?
+    var postSigInData : String?
     let confirmNavsucess = "saved successfully and otp had sent"
     let confirmNavFailed = "Number already exists"
+    weak var rootDelgate : RootSwitching?
     @IBOutlet weak var userButton: UIButton!
     @IBOutlet weak var propertyButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
@@ -24,7 +26,9 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        customTextField()
-        RegisterService.sharedInstance.delegate = self
+        
+        RegisterService.sharedInstance.delegateSigIn = self
+        rootDelgate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
         // Do any additional setup after loading the view.
     }
     
@@ -70,11 +74,11 @@ class SignInVC: UIViewController {
         if phoneNumb == true {
             if strValue == "user"{
                 print("User")
-                RegisterService.sharedInstance.callingApiPost(register: RegisterModel.init(sign_up_by: strValue, mobileNumber: phoneNumber))
+//                RegisterService.sharedInstance.callingApiPost(register: RegisterModel.init(sign_up_by: strValue, mobileNumber: phoneNumber))
             }
             else if strValue == "property"{
                 print("Property")
-                RegisterService.sharedInstance.callingApiPost(register: RegisterModel.init(sign_up_by: strValue, mobileNumber: phoneNumber))
+//                RegisterService.sharedInstance.callingApiPost(register: RegisterModel.init(sign_up_by: strValue, mobileNumber: phoneNumber))
             }
             else if strValue == ""{
                 showAlertError()
@@ -84,16 +88,29 @@ class SignInVC: UIViewController {
         }
         
     }
+//    MARK:- SIGNIN FUNCTOINS AND API CALLING PROCEDURE & VALIDATION
     
     @IBAction func signInButton(_ sender: UIButton) {
         let signInEmail = emailTextField.text
         let signInPassword = passwordTextField.text
         
         if signInEmail != nil && signInPassword != nil {
+            
             let data = SignInInfo.init(email: signInEmail, password: signInPassword)
             RegisterService.sharedInstance.postSignIn(data: data)
+           
         }else {
             print("The sign up id done properly")
+        }
+
+    }
+    
+    
+    func sigin() {
+        if  postSigInData == "sucess" {
+             rootDelgate?.loginSucceed()
+        }else {
+            return
         }
     }
     
@@ -175,9 +192,12 @@ class SignInVC: UIViewController {
     }
     
 }
-extension SignInVC : PostResponse {
-    func message(message: String?, id: String?) {
-        postMessage = message!
-        navAuth()
+
+extension SignInVC : PostRespondsSignIN {
+    func data(result: String?, token: String?) {
+        postSigInData = result!
+        sigin()
     }
+    
 }
+

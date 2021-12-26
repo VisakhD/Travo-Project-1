@@ -49,4 +49,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+extension SceneDelegate : RootSwitching {
+    
+    func loginSucceed() {
+        let home = UIStoryboard(name: "HomePage", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+        window?.rootViewController = home
+    }
+    
+    func logOut() {
+        let initial = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        window?.rootViewController = initial
+    }
+    
+    func dismissRegister() {
+        let main = UIStoryboard(name: "HotelRegister", bundle: nil).instantiateViewController(withIdentifier: "HotelRegisterationViewController") as! HotelRegisterationViewController
+        window?.rootViewController = main
+    }
+    
+}
 

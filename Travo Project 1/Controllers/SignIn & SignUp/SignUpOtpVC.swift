@@ -13,21 +13,24 @@ class SignUpOtpVC: UIViewController {
     var phoneNumber : String = ""
     var postMessage :String?
     var signUpId : String = ""
+    var passingNumber : String = ""
+//    variables for Authentication purpose
     let confirmNavsucess = "saved successfully and otp had sent"
     let confirmNavFailed = "Number already exists"
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var userButton: UIButton!
     @IBOutlet weak var propertyOwner: UIButton!
-    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customTextField()
+        RegisterService.sharedInstance.delegate = self  // CALLING THE SIGN UP API RESPONDS "message for verification"
         
         // Do any additional setup after loading the view.
         
-        RegisterService.sharedInstance.delegate = self
+
     }
     
     //MARK:- Radio Button
@@ -124,12 +127,11 @@ class SignUpOtpVC: UIViewController {
     //MARK:- NAVIGATION TO NEXT CONTROLLER
     
     func navAuth() {
-        
+        passingNumber = phoneNumberTextField.text!
         if postMessage == confirmNavsucess{
             let regVC = storyboard?.instantiateViewController(identifier: "register")  as! OTPRegisterSignUpViewController
             self.navigationController?.pushViewController(regVC, animated: true)
-            regVC.sigUpIdData = signUpId
-            
+            regVC.recivingNumber = passingNumber
             
         }else if postMessage == confirmNavFailed{
             alertErrorNumberExist()
@@ -149,12 +151,9 @@ class SignUpOtpVC: UIViewController {
 }
 
 extension SignUpOtpVC : PostResponse{
-
-    func message(message: String?,id: String?) {
+    func message(message: String?) {
         postMessage = message!
-        signUpId = id!
         navAuth()
     }
 }
-
 

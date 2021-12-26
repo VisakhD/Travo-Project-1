@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zXo-ME-3t9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="EDY-3Q-nre">
             <objects>
-                <tabBarController id="zXo-ME-3t9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zXo-ME-3t9" customClass="TabBarViewController" customModule="Travo_Project_1" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lMS-4y-Nfd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,15 +29,20 @@
             </objects>
             <point key="canvasLocation" x="-1665" y="611"/>
         </scene>
-        <!--Item-->
+        <!--HOME-->
         <scene sceneID="FlS-pG-fv7">
             <objects>
                 <navigationController id="ef2-a1-Lwq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7xZ-Bt-QwS"/>
+                    <tabBarItem key="tabBarItem" title="HOME" id="7xZ-Bt-QwS">
+                        <imageReference key="image" image="homekit" catalog="system" symbolScale="medium" renderingMode="original"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="s79-PZ-QD6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MqR-Zs-l9d">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="33r-8R-c61" kind="relationship" relationship="rootViewController" id="4rB-qp-vx4"/>
                     </connections>
@@ -45,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="-424" y="-493"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Page View Controller-->
         <scene sceneID="rrD-8M-8cG">
             <objects>
-                <viewController id="33r-8R-c61" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="33r-8R-c61" customClass="HomePageViewController" customModule="Travo_Project_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q0T-Iq-oeP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,11 +67,13 @@
             </objects>
             <point key="canvasLocation" x="922" y="-468"/>
         </scene>
-        <!--Item-->
+        <!--MAP-->
         <scene sceneID="zQh-l8-3Eg">
             <objects>
                 <navigationController id="5Gh-kJ-vtt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lcl-aM-HvK"/>
+                    <tabBarItem key="tabBarItem" title="MAP" id="lcl-aM-HvK">
+                        <imageReference key="image" image="map" catalog="system" symbolScale="medium" renderingMode="original"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tqV-2W-rbW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -78,11 +86,13 @@
             </objects>
             <point key="canvasLocation" x="-404" y="190"/>
         </scene>
-        <!--Item-->
+        <!--Notification-->
         <scene sceneID="AKd-DO-heL">
             <objects>
                 <navigationController id="FnS-h5-ioZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="z1W-1e-CTO"/>
+                    <tabBarItem key="tabBarItem" title="Notification" id="z1W-1e-CTO">
+                        <imageReference key="image" image="bell.fill" catalog="system" symbolScale="medium" renderingMode="original"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gnO-wg-8be">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -95,11 +105,13 @@
             </objects>
             <point key="canvasLocation" x="-404" y="923"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="xDe-gE-3DF">
             <objects>
                 <navigationController id="9vQ-xO-Gmb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="owm-qU-Jwr"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="owm-qU-Jwr">
+                        <imageReference key="image" image="person.fill" catalog="system" symbolScale="medium" renderingMode="original"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OUB-9n-GMQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -112,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="-384" y="1649"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="KEA-GF-cdQ">
             <objects>
-                <viewController id="YmY-Vu-fcu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YmY-Vu-fcu" customClass="MapViewController" customModule="Travo_Project_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ax4-rY-2hH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="923" y="252"/>
         </scene>
-        <!--View Controller-->
+        <!--Notification View Controller-->
         <scene sceneID="C9b-2F-bmS">
             <objects>
-                <viewController id="Oju-qT-kd0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="notification" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oju-qT-kd0" customClass="NotificationViewController" customModule="Travo_Project_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="60a-vz-naa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="922" y="947"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="wUW-Cy-K6M">
             <objects>
-                <viewController id="qap-lX-Yrc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qap-lX-Yrc" customClass="ProfileViewController" customModule="Travo_Project_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bgp-BK-szg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,6 +174,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bell.fill" catalog="system" width="128" height="124"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

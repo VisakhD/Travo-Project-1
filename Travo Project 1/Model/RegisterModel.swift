@@ -18,7 +18,7 @@ struct RegisterModel: Encodable {
 
 struct RespondsModel : Decodable {
     let message : String?
-    let _id : String?
+    let mobileNumber : String?
     
 }
 //MARK:- REGISTER DETAILS MODEL FOR THE APP POST AND GET REQUEST
@@ -44,6 +44,7 @@ struct UserDet : Codable {
     let email : String?
     let user_name : String?
     let name : String?
+    
 }
 
 //MARK:- SIGN IN MODEL FOR SENTING SIGNIN DETAILS
@@ -66,5 +67,18 @@ struct UserDt : Codable {
     let email : String?
     let user_name : String?
     let name : String?
+    let _id : String?
+}
+
+//MARK:- OTP POST METHODS AND RESPONDS
+
+struct OtpSignUp : Codable {
+    let mobileNumber : String?
+    let otp : String?
+
+}
+
+struct OtpSignUpResponds : Codable {
+    let message : String?
     let _id : String?
 }

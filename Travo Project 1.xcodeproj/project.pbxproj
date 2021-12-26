@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3228F1432771FD2F006B45F9 /* Route Switching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F1422771FD2F006B45F9 /* Route Switching.swift */; };
+		3228F14727731668006B45F9 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F14627731668006B45F9 /* HomePageViewController.swift */; };
+		3228F1492774BDA2006B45F9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F1482774BDA2006B45F9 /* TabBarViewController.swift */; };
+		3228F14B2774D27C006B45F9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F14A2774D27C006B45F9 /* MapViewController.swift */; };
+		3228F14D2774D28F006B45F9 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F14C2774D28F006B45F9 /* NotificationViewController.swift */; };
+		3228F14F2774D2A0006B45F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F14E2774D2A0006B45F9 /* ProfileViewController.swift */; };
+		3228F1522774D3D0006B45F9 /* HotelRegisterationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F1512774D3D0006B45F9 /* HotelRegisterationViewController.swift */; };
 		322B9C782767518500357E3E /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B9C772767518500357E3E /* RegisterService.swift */; };
 		322B9C7A276751E300357E3E /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B9C79276751E300357E3E /* RegisterModel.swift */; };
 		322B9C7D276752ED00357E3E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 322B9C7C276752ED00357E3E /* Alamofire */; };
@@ -31,6 +38,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3228F1422771FD2F006B45F9 /* Route Switching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route Switching.swift"; sourceTree = "<group>"; };
+		3228F14627731668006B45F9 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		3228F1482774BDA2006B45F9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		3228F14A2774D27C006B45F9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3228F14C2774D28F006B45F9 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		3228F14E2774D2A0006B45F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3228F1512774D3D0006B45F9 /* HotelRegisterationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelRegisterationViewController.swift; sourceTree = "<group>"; };
 		322B9C772767518500357E3E /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		322B9C79276751E300357E3E /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		322B9C7E2768635A00357E3E /* SignUpOtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOtpVC.swift; sourceTree = "<group>"; };
@@ -67,6 +81,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3228F1442771FEEC006B45F9 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				3228F14627731668006B45F9 /* HomePageViewController.swift */,
+				3228F14A2774D27C006B45F9 /* MapViewController.swift */,
+				3228F14C2774D28F006B45F9 /* NotificationViewController.swift */,
+				3228F14E2774D2A0006B45F9 /* ProfileViewController.swift */,
+				3228F1482774BDA2006B45F9 /* TabBarViewController.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		3228F1452771FF2F006B45F9 /* SignIn & SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				32601478276C6A62007276C7 /* SignUpDetailsViewController.swift */,
+				322B9C7E2768635A00357E3E /* SignUpOtpVC.swift */,
+				32FE9EB2276466940016050A /* SignInVC.swift */,
+				325490E32761DA0A0020605E /* ViewController.swift */,
+			);
+			path = "SignIn & SignUp";
+			sourceTree = "<group>";
+		};
+		3228F1502774D389006B45F9 /* Hotel Registeration */ = {
+			isa = PBXGroup;
+			children = (
+				3228F1512774D3D0006B45F9 /* HotelRegisterationViewController.swift */,
+			);
+			path = "Hotel Registeration";
+			sourceTree = "<group>";
+		};
 		325490D32761DA0A0020605E = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +166,7 @@
 			children = (
 				325490DF2761DA0A0020605E /* AppDelegate.swift */,
 				325490E12761DA0A0020605E /* SceneDelegate.swift */,
+				3228F1422771FD2F006B45F9 /* Route Switching.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -128,11 +174,10 @@
 		325490FD2761DD050020605E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				325490E32761DA0A0020605E /* ViewController.swift */,
-				32FE9EB2276466940016050A /* SignInVC.swift */,
-				322B9C7E2768635A00357E3E /* SignUpOtpVC.swift */,
-				32601478276C6A62007276C7 /* SignUpDetailsViewController.swift */,
+				3228F1452771FF2F006B45F9 /* SignIn & SignUp */,
 				32601470276B7607007276C7 /* OTP Register Controller */,
+				3228F1442771FEEC006B45F9 /* HomePage */,
+				3228F1502774D389006B45F9 /* Hotel Registeration */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -247,10 +292,16 @@
 			files = (
 				325490E42761DA0A0020605E /* ViewController.swift in Sources */,
 				32FE9EB3276466940016050A /* SignInVC.swift in Sources */,
+				3228F1522774D3D0006B45F9 /* HotelRegisterationViewController.swift in Sources */,
 				322B9C7A276751E300357E3E /* RegisterModel.swift in Sources */,
+				3228F14727731668006B45F9 /* HomePageViewController.swift in Sources */,
+				3228F1492774BDA2006B45F9 /* TabBarViewController.swift in Sources */,
+				3228F1432771FD2F006B45F9 /* Route Switching.swift in Sources */,
 				325490E02761DA0A0020605E /* AppDelegate.swift in Sources */,
+				3228F14B2774D27C006B45F9 /* MapViewController.swift in Sources */,
 				32601476276C478B007276C7 /* TravoProject1Model.xcdatamodeld in Sources */,
 				325490E22761DA0A0020605E /* SceneDelegate.swift in Sources */,
+				3228F14D2774D28F006B45F9 /* NotificationViewController.swift in Sources */,
 				3260146D276B6714007276C7 /* OTPRegisterSignUpViewController.swift in Sources */,
 				3260146F276B749E007276C7 /* OTPRegisterSignInViewController.swift in Sources */,
 				323D11702771AD7000C142E2 /* UserDetails+CoreDataProperties.swift in Sources */,
@@ -258,6 +309,7 @@
 				322B9C782767518500357E3E /* RegisterService.swift in Sources */,
 				32AD9D1F276DB74600B9E2D1 /* Helper.swift in Sources */,
 				323D116F2771AD7000C142E2 /* UserDetails+CoreDataClass.swift in Sources */,
+				3228F14F2774D2A0006B45F9 /* ProfileViewController.swift in Sources */,
 				32601479276C6A62007276C7 /* SignUpDetailsViewController.swift in Sources */,
 				32601473276BAD7B007276C7 /* Manager.swift in Sources */,
 			);
