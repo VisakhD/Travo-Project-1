@@ -10,8 +10,8 @@ import UIKit
 class SignInVC: UIViewController {
     var strValue : String = ""
     var phoneNumber : String = ""
-    var postMessage :String?
-    var postSigInData : String?
+    var postMessage :String = ""
+    var postSigInData : String = ""
     let confirmNavsucess = "saved successfully and otp had sent"
     let confirmNavFailed = "Number already exists"
     weak var rootDelgate : RootSwitching?

@@ -10,6 +10,9 @@ import CoreData
 
 
 class CoreData {
+    
+    static let shared = CoreData()
+    var userData : [UserDetails]?
      
     lazy var persistentContainer: NSPersistentContainer = {
         /*
@@ -37,6 +40,7 @@ class CoreData {
         })
         return container
     }()
+    private init () {}
     
     func saveContext () {
         let context = persistentContainer.viewContext
@@ -49,6 +53,28 @@ class CoreData {
             }
         }
     }
+    
+//     saving data into core data
+    
+    func signUpUserDetails (name : String, username : String,following : Int, followers : Int, mobileNumber : String, email : String, token : String) {
+        let context = persistentContainer.viewContext
+        
+        let user  = NSEntityDescription.insertNewObject(forEntityName: "UserDetails", into: context)  as! UserDetails
+        
+        user.setValue(name, forKey: "name")
+        user.setValue(username, forKey: "user_name")
+        user.setValue(following, forKey: "following")
+        user.setValue(followers, forKey: "followers")
+        user.setValue(mobileNumber, forKey: "mobileNumber")
+        user.setValue(email, forKey: "email")
+        user.setValue(token, forKey: "token")
+        
+        try! context.save()
+        print("save sucess")
+    }
+    
+    
+    
     
     
 }

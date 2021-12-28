@@ -34,10 +34,10 @@ struct RegisterDetailsModel : Codable {
 
 struct RegisterDetailsResponds : Codable {
     let token : String?
-    let user : UserDet?
+    let user : User?
 }
 //changed the User name into userdet if error shots check this area
-struct UserDet : Codable {
+struct User : Codable {
     let mobileNumber : String?
     let following : [String]?
     let followers : [String]?

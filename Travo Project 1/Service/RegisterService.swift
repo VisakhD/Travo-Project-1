@@ -17,7 +17,7 @@ protocol PostRespondsSignIN {
 }
 
 protocol PostRespondsSignInDetails {
-    func ID(id : String?, token : String?, message : String?)
+    func ID(token : String?)
 }
 
 protocol PostOtpSignUpResponds {
@@ -31,6 +31,14 @@ class RegisterService {
     var delegateOtp : PostOtpSignUpResponds?
     var notice : String = ""
     
+    var namePass : String = ""
+    var usernamePass : String = ""
+    var emailPass : String = ""
+    var followingPass : Int?
+    var followersPass : Int?
+    var tokenPass : String = ""
+    var mobileNumberpass : String = ""
+    
     static let sharedInstance = RegisterService()
     
 //    MARK:- SIGNUP MOBILE NUMBER REGISTERATION
@@ -41,10 +49,12 @@ class RegisterService {
             switch responds.result {
             case .success(let message) :
                 if let JSON = message as? [String: Any] {
+                    
                     let message = JSON["message"] as! String
-//                    let sigUpID = JSON["_id"] as! String
+
                     self.delegate?.message(message: message)
                     print(message)
+                   
                 }
             case .failure(let Error): return
                 print(Error)
@@ -58,16 +68,50 @@ class RegisterService {
         
         AF.request("https://travosocialmedia.herokuapp.com/api/auth/mobile_signup", method: .post, parameters: registerDetails, encoder: JSONParameterEncoder.default).responseJSON { (respondsDetails) in
             switch respondsDetails.result {
-            case .success(let message) :
-                if let JSON = message as? [String: Any] {
-                    let message = JSON["message"] as! String
-                    let token = JSON["token"] as! String
-                    let id = JSON["_id"] as! String
-                    let mobileNumber = JSON["mobileNumber"] as! String
-                    
-                    self.delegateID?.ID(id: id, token: token,message : message)
-                    print(token)
-                    print(id)
+//            case .success(let message) :
+//                if let JSON = message as? [String: Any] {
+//
+//                    let token = JSON["token"] as! String
+////                    let email = JSON["email"] as! String
+////                    print(email)
+//                    self.delegateID?.ID(token: token)
+//                    print(token)
+//
+//
+//                }
+            case.success(let data) :
+                if let JSON = data as? [String : Any] {
+                    let token = JSON["token"] as? String
+                    print(token!)
+                    self.tokenPass = token!
+                    self.delegateID?.ID(token: token)
+                    if let  user =  JSON ["user"] as? [String:AnyObject] {
+                        if let email = user ["email"] as? String {
+                            print(email)
+                            self.emailPass = email
+                        }
+                        if let mobileNumber = user ["mobileNumber"] as? String {
+                            print(mobileNumber)
+                            self.mobileNumberpass = mobileNumber
+                        }
+                        if let following = user["following"]?.count {
+                            print(following)
+                            self.followingPass = following
+                        }
+                        if let followers = user["followers"]?.count {
+                            print(followers)
+                            self.followersPass = followers
+                        }
+                        if let username = user["user_name"] as? String {
+                            print(username)
+                            self.usernamePass = username
+                        }
+                        if let name = user["name"] as? String {
+                            print(name)
+                            self.namePass = name
+                        }
+                     }
+                    CoreData.shared.signUpUserDetails(name: self.namePass, username: self.usernamePass, following: self.followingPass!, followers: self.followersPass!, mobileNumber: self.mobileNumberpass, email: self.mobileNumberpass, token: self.tokenPass)
                 }
             case .failure(let error): return
                 print(error)
