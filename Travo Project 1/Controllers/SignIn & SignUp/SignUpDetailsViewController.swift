@@ -8,8 +8,9 @@
 import UIKit
 
 
-class SignUpDetailsViewController: UIViewController {
+class SignUpDetailsViewController: UIViewController{
     var signUpId : String = ""
+    var signUpToken : String = ""
     weak var rootDelgate : RootSwitching?
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -19,8 +20,15 @@ class SignUpDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customTextFlied()
+//        customTextFlied()
+        RegisterService.sharedInstance.delegateID = self
         rootDelgate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
+        
+        nameTextField.customField()
+        usernameTextField.customField()
+        emailTextField.customField()
+        passwordTextField.customField()
+        confirmPasswordTextField.customField()
         // Do any additional setup after loading the view.
     }
     
@@ -35,59 +43,65 @@ class SignUpDetailsViewController: UIViewController {
         let id = signUpId
         
         if password == confirmPassword {
-     let reg =   RegisterDetailsModel.init(name: name, user_name: username, userId: id, email: email, password: password)
-        RegisterService.sharedInstance.postApiDetails(registerDetails: reg)
-        
-        rootDelgate?.loginSucceed()
+            let reg =   RegisterDetailsModel.init(name: name, user_name: username, userId: id, email: email, password: password)
+               RegisterService.sharedInstance.postApiDetails(registerDetails: reg)
         }else {
             alertErrorNumberExist()
         }
     }
     
+    func signUpComplete() {
+        if signUpToken != nil && signUpToken != "" {
+           rootDelgate?.loginSucceed()
+        }else {
+            alertErrorSignUpDetailerror()
+        }
+    }
+    
 //MARK:- CUSTOM TEXT FIELD CODE
     
-    func customTextFlied(){
-        
-    let nameFieldLine = CALayer()
-        nameFieldLine.frame = CGRect(x: 0, y: nameTextField.frame.height, width: 280, height: 2)
-        nameFieldLine.backgroundColor = UIColor.black.cgColor
-//        removing border for textfield
-        nameTextField.borderStyle = .none
-//        addLine to the textfield
-        nameTextField.layer.addSublayer(nameFieldLine)
-        
-        let usernameFieldLine = CALayer()
-            usernameFieldLine.frame = CGRect(x: 0, y: usernameTextField.frame.height, width: 280, height: 2)
-            usernameFieldLine.backgroundColor = UIColor.black.cgColor
-    //        removing border for textfield
-            usernameTextField.borderStyle = .none
-    //        addLine to the textfield
-            usernameTextField.layer.addSublayer(usernameFieldLine)
-    
-        let emailFieldLine = CALayer()
-            emailFieldLine.frame = CGRect(x: 0, y: emailTextField.frame.height, width: 280, height: 2)
-            emailFieldLine.backgroundColor = UIColor.black.cgColor
-    //        removing border for textfield
-            emailTextField.borderStyle = .none
-    //        addLine to the textfield
-            emailTextField.layer.addSublayer(emailFieldLine)
-        
-        let passwordFieldLine = CALayer()
-            passwordFieldLine.frame = CGRect(x: 0, y: passwordTextField.frame.height, width: 280, height: 2)
-            passwordFieldLine.backgroundColor = UIColor.black.cgColor
-    //        removing border for textfield
-            passwordTextField.borderStyle = .none
-    //        addLine to the textfield
-            passwordTextField.layer.addSublayer(passwordFieldLine)
-        
-        let confirmPasswordFieldLine = CALayer()
-            confirmPasswordFieldLine.frame = CGRect(x: 0, y: confirmPasswordTextField.frame.height, width: 280, height: 2)
-            confirmPasswordFieldLine.backgroundColor = UIColor.black.cgColor
-    //        removing border for textfield
-            confirmPasswordTextField.borderStyle = .none
-    //        addLine to the textfield
-            confirmPasswordTextField.layer.addSublayer(confirmPasswordFieldLine)
-    }
+//    func customTextFlied(){
+//
+//    let nameFieldLine = CALayer()
+//        nameFieldLine.frame = CGRect(x: 0, y: nameTextField.frame.height, width: 280, height: 2)
+//        nameFieldLine.backgroundColor = UIColor.black.cgColor
+////        removing border for textfield
+//        nameTextField.borderStyle = .none
+////        addLine to the textfield
+//        nameTextField.layer.addSublayer(nameFieldLine)
+//
+//        let usernameFieldLine = CALayer()
+//            usernameFieldLine.frame = CGRect(x: 0, y: usernameTextField.frame.height, width: 280, height: 2)
+//            usernameFieldLine.backgroundColor = UIColor.black.cgColor
+//    //        removing border for textfield
+//            usernameTextField.borderStyle = .none
+//    //        addLine to the textfield
+//            usernameTextField.layer.addSublayer(usernameFieldLine)
+//
+//        let emailFieldLine = CALayer()
+//            emailFieldLine.frame = CGRect(x: 0, y: emailTextField.frame.height, width: 280, height: 2)
+//            emailFieldLine.backgroundColor = UIColor.black.cgColor
+//    //        removing border for textfield
+//            emailTextField.borderStyle = .none
+//    //        addLine to the textfield
+//            emailTextField.layer.addSublayer(emailFieldLine)
+//
+//        let passwordFieldLine = CALayer()
+//            passwordFieldLine.frame = CGRect(x: 0, y: passwordTextField.frame.height, width: 280, height: 2)
+//            passwordFieldLine.backgroundColor = UIColor.black.cgColor
+//    //        removing border for textfield
+//            passwordTextField.borderStyle = .none
+//    //        addLine to the textfield
+//            passwordTextField.layer.addSublayer(passwordFieldLine)
+//
+//        let confirmPasswordFieldLine = CALayer()
+//            confirmPasswordFieldLine.frame = CGRect(x: 0, y: confirmPasswordTextField.frame.height, width: 280, height: 2)
+//            confirmPasswordFieldLine.backgroundColor = UIColor.black.cgColor
+//    //        removing border for textfield
+//            confirmPasswordTextField.borderStyle = .none
+//    //        addLine to the textfield
+//            confirmPasswordTextField.layer.addSublayer(confirmPasswordFieldLine)
+//    }
     
     func alertErrorNumberExist() {
         let alert = UIAlertController(title: "Error", message: "Password Does Not Match", preferredStyle: .alert)
@@ -97,6 +111,20 @@ class SignUpDetailsViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func alertErrorSignUpDetailerror() {
+        let alert = UIAlertController(title: "Error", message: "SginUp not completed Server Error", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
+            print("Responds is not getting fethched after signup details post request")
+        }))
+        present(alert, animated: true, completion: nil)
+    }
     
 }
+extension SignUpDetailsViewController : PostRespondsSignInDetails {
+    func ID(token: String?) {
+        signUpToken = token!
+        signUpComplete()
+    }
+}
+
 

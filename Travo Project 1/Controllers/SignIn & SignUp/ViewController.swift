@@ -8,16 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    weak var rootDelgate : RootSwitching?
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       rootDelgate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
     }
 
     @IBAction func signInButton(_ sender: Any) {
-        let homeVC = self.storyboard?.instantiateViewController(identifier: "SignInVC") as! SignInVC
-        self.navigationController?.pushViewController( homeVC, animated: true)
-        
+//        let homeVC = self.storyboard?.instantiateViewController(identifier: "SignInVC") as! SignInVC
+//        self.navigationController?.pushViewController( homeVC, animated: true)
+        rootDelgate?.loginSucceed()
     }
     
     @IBAction func signUpButton(_ sender: Any) {

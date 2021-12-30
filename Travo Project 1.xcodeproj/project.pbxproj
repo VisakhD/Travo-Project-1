@@ -14,6 +14,7 @@
 		3228F14D2774D28F006B45F9 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F14C2774D28F006B45F9 /* NotificationViewController.swift */; };
 		3228F14F2774D2A0006B45F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F14E2774D2A0006B45F9 /* ProfileViewController.swift */; };
 		3228F1522774D3D0006B45F9 /* HotelRegisterationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F1512774D3D0006B45F9 /* HotelRegisterationViewController.swift */; };
+		3228F156277C9997006B45F9 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F155277C9997006B45F9 /* AddPostViewController.swift */; };
 		322B9C782767518500357E3E /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B9C772767518500357E3E /* RegisterService.swift */; };
 		322B9C7A276751E300357E3E /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B9C79276751E300357E3E /* RegisterModel.swift */; };
 		322B9C7D276752ED00357E3E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 322B9C7C276752ED00357E3E /* Alamofire */; };
@@ -45,6 +46,7 @@
 		3228F14C2774D28F006B45F9 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		3228F14E2774D2A0006B45F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3228F1512774D3D0006B45F9 /* HotelRegisterationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelRegisterationViewController.swift; sourceTree = "<group>"; };
+		3228F155277C9997006B45F9 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		322B9C772767518500357E3E /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		322B9C79276751E300357E3E /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		322B9C7E2768635A00357E3E /* SignUpOtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOtpVC.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				3228F14627731668006B45F9 /* HomePageViewController.swift */,
 				3228F14A2774D27C006B45F9 /* MapViewController.swift */,
 				3228F14C2774D28F006B45F9 /* NotificationViewController.swift */,
+				3228F155277C9997006B45F9 /* AddPostViewController.swift */,
 				3228F14E2774D2A0006B45F9 /* ProfileViewController.swift */,
 				3228F1482774BDA2006B45F9 /* TabBarViewController.swift */,
 			);
@@ -311,6 +314,7 @@
 				323D116F2771AD7000C142E2 /* UserDetails+CoreDataClass.swift in Sources */,
 				3228F14F2774D2A0006B45F9 /* ProfileViewController.swift in Sources */,
 				32601479276C6A62007276C7 /* SignUpDetailsViewController.swift in Sources */,
+				3228F156277C9997006B45F9 /* AddPostViewController.swift in Sources */,
 				32601473276BAD7B007276C7 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
