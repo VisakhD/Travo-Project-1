@@ -83,32 +83,15 @@ class SignUpOtpVC: UIViewController {
                 print("Property")
                 RegisterService.sharedInstance.callingApiPost(register: RegisterModel(sign_up_by: strVal, mobileNumber: phoneNumber))
             }else if strVal == ""{
-                alertError()
+                alertMessages(title: "Error", message: "Choose USER or PROPERTY OWNER")
             }
         }else{
-            alertErrorPhoneNumber()
+          alertMessages(title: "Error", message: "Please Enter 10 Digits Phone Number")
         }
         
     }
     
-    //    MARK:- ALERT FUNCTIONS FOR ERRORS
-    
-    //    alert for radio button non selection
-    func alertError() {
-        let alert = UIAlertController(title: "Error", message: "Choose USER or PROPERTY OWNER", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
-            print("user or property owner is not selected")
-        }))
-        present(alert, animated: true, completion: nil)
-    }
-    //   alert for phone number validation
-    func alertErrorPhoneNumber() {
-        let alert = UIAlertController(title: "Error", message: "Please Enter 10 Digits Phone Number", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
-            print("user or property owner is not selected")
-        }))
-        present(alert, animated: true, completion: nil)
-    }
+  
     
     //MARK:- CUSTOM TEXT
     
@@ -134,20 +117,22 @@ class SignUpOtpVC: UIViewController {
             regVC.recivingNumber = passingNumber
             
         }else if postMessage == confirmNavFailed{
-            alertErrorNumberExist()
+            alertMessages(title: "Error", message: "Number already exists")
         }else{
             return
         }
 
     }
-    
-    func alertErrorNumberExist() {
-        let alert = UIAlertController(title: "Error", message: "Number already exists", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
-            print("user or property owner is not selected")
-        }))
+
+    func alertMessages(title : String, message: String) {
+      let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
+          print("password and confirm password doesnot match")
+      }))
         present(alert, animated: true, completion: nil)
     }
+
+
 }
 
 extension SignUpOtpVC : PostResponse{

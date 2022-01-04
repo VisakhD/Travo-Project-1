@@ -1,20 +1,19 @@
 //
-//  HomePageViewController.swift
-//  Travo Project 1
+//  ViewController.swift
+//  Scroll View  testing
 //
-//  Created by Visakh D on 22/12/21.
+//  Created by Visakh D on 30/12/21.
 //
 
 import UIKit
 
-class HomePageViewController: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
-    
 
 
 }
+

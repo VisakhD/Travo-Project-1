@@ -18,7 +18,8 @@ class ViewController: UIViewController {
 //        let homeVC = self.storyboard?.instantiateViewController(identifier: "SignInVC") as! SignInVC
 //        self.navigationController?.pushViewController( homeVC, animated: true)
         rootDelgate?.loginSucceed()
-    }
+
+  }
     
     @IBAction func signUpButton(_ sender: Any) {
        

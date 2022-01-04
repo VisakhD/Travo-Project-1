@@ -10,8 +10,8 @@ import UIKit
 class SignInVC: UIViewController {
     var strValue : String = ""
     var phoneNumber : String = ""
-    var postMessage :String = ""
-    var postSigInData : String = ""
+    var postMessage :String?
+    var postSigInData : String?
     let confirmNavsucess = "saved successfully and otp had sent"
     let confirmNavFailed = "Number already exists"
     weak var rootDelgate : RootSwitching?
@@ -21,18 +21,20 @@ class SignInVC: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var phoneNumbTextField: UITextField!
     
-  
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       customTextField()
         
         RegisterService.sharedInstance.delegateSigIn = self
         rootDelgate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
+        emailTextField.customField()
+        passwordTextField.customField()
+        phoneNumbTextField.customField()
         // Do any additional setup after loading the view.
     }
     
-//MARK:- MOBILE NUMBER VALIDATION
+    //MARK:- MOBILE NUMBER VALIDATION
     
     func validation () -> Bool? {
         phoneNumber  = phoneNumbTextField.text!
@@ -45,9 +47,9 @@ class SignInVC: UIViewController {
             return false
         }
     }
-//MARK:-  RADIO BUTTON IN SIGNIN PAGE
+    //MARK:-  RADIO BUTTON IN SIGNIN PAGE
     
-//    radio button function for these button implemented
+    //    radio button function for these button implemented
     
     func setUser (isUser : Bool){
         if isUser{
@@ -64,31 +66,31 @@ class SignInVC: UIViewController {
         setUser(isUser: true)
     }
     @IBAction func propertyRadioButton(_ sender: UIButton) {
-
+        
         setUser(isUser: false)
     }
-//MARK:- OTP SENDING API FUNCTION
+    //MARK:- OTP SENDING API FUNCTION
     
     @IBAction func otpCodeButton(_ sender: Any) {
         let phoneNumb = validation()
         if phoneNumb == true {
             if strValue == "user"{
                 print("User")
-//                RegisterService.sharedInstance.callingApiPost(register: RegisterModel.init(sign_up_by: strValue, mobileNumber: phoneNumber))
+                //                RegisterService.sharedInstance.callingApiPost(register: RegisterModel.init(sign_up_by: strValue, mobileNumber: phoneNumber))
             }
             else if strValue == "property"{
                 print("Property")
-//                RegisterService.sharedInstance.callingApiPost(register: RegisterModel.init(sign_up_by: strValue, mobileNumber: phoneNumber))
+                //                RegisterService.sharedInstance.callingApiPost(register: RegisterModel.init(sign_up_by: strValue, mobileNumber: phoneNumber))
             }
             else if strValue == ""{
-                showAlertError()
+                alertMessages(title: "Error", message: "Choose USER or PROPERTY OWNER")
             }
         }else {
-            alertErrorPhoneNumber()
+            alertMessages(title:  "Error", message: "Please Enter 10 Digits Phone Number")
         }
         
     }
-//    MARK:- SIGNIN FUNCTOINS AND API CALLING PROCEDURE & VALIDATION
+    //    MARK:- SIGNIN FUNCTOINS AND API CALLING PROCEDURE & VALIDATION
     
     @IBAction func signInButton(_ sender: UIButton) {
         let signInEmail = emailTextField.text
@@ -98,17 +100,17 @@ class SignInVC: UIViewController {
             
             let data = SignInInfo.init(email: signInEmail, password: signInPassword)
             RegisterService.sharedInstance.postSignIn(data: data)
-           
+            
         }else {
             print("The sign up id done properly")
         }
-
+        
     }
     
     
     func sigin() {
         if  postSigInData == "sucess" {
-             rootDelgate?.loginSucceed()
+            rootDelgate?.loginSucceed()
         }else {
             return
         }
@@ -122,53 +124,10 @@ class SignInVC: UIViewController {
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
-// MARK:- ALERT FUNCTION FOR ERRORS
-    
-    func showAlertError(){
-        let  alert = UIAlertController(title: "Error", message: "Choose USER or PROPERTY OWNER", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { action in
-            print("user or property owner is not selected")
-        }))
-        present(alert, animated: true, completion: nil)
-    }
-    
-    func alertErrorPhoneNumber() {
-        let alert = UIAlertController(title: "Error", message: "Please Enter 10 Digits Phone Number", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
-            print("user or property owner is not selected")
-        }))
-        present(alert, animated: true, completion: nil)
-    }
     
     
-//MARK:- CUSTOM TEXT FIELD
     
-   
-    func customTextField() {
-        
-        let phoneLine  = CALayer()
-        let emailLine  = CALayer()
-        let passwordLine = CALayer()
-        phoneLine.frame = CGRect(x: 0, y: phoneNumbTextField.frame.height, width: phoneNumbTextField.frame.width, height: 2)
-        phoneLine.backgroundColor = UIColor.black.cgColor
-        emailLine.frame = CGRect(x: 0, y: emailTextField.frame.height, width: 278, height: 2)
-        emailLine.backgroundColor = UIColor.black.cgColor
-        passwordLine.frame = CGRect(x: 0, y: passwordTextField.frame.height, width: 278, height: 2)
-        passwordLine.backgroundColor = UIColor.black.cgColor
-//        Remove textField border
-        
-        phoneNumbTextField.borderStyle = .none
-        emailTextField.borderStyle = .none
-        passwordTextField.borderStyle = .none
-        
-//        add line to the text field
-        
-        phoneNumbTextField.layer.addSublayer(phoneLine)
-        emailTextField.layer.addSublayer(emailLine)
-        passwordTextField.layer.addSublayer(passwordLine)
-    }
-    
-// MARK:- NAVIGATE TO NEXT VIEW CONTROLLER
+    // MARK:- NAVIGATE TO NEXT VIEW CONTROLLER
     
     func navAuth(){
         if postMessage == confirmNavsucess{
@@ -176,19 +135,18 @@ class SignInVC: UIViewController {
             self.navigationController?.pushViewController(regVC, animated: true)
             
         }else if postMessage == confirmNavFailed{
-            alertErrorNumberExist()
+            alertMessages(title: "Error", message: "Number already exists")
         }else{
             return
         }
-        
-        
-        func alertErrorNumberExist() {
-            let alert = UIAlertController(title: "Error", message: "Number already exists", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
-                print("user or property owner is not selected")
-            }))
-            present(alert, animated: true, completion: nil)
-        }
+    }
+    
+    func alertMessages(title : String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
+            print("password and confirm password doesnot match")
+        }))
+        present(alert, animated: true, completion: nil)
     }
     
 }

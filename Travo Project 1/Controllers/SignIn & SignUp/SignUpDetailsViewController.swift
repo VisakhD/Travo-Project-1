@@ -46,79 +46,28 @@ class SignUpDetailsViewController: UIViewController{
             let reg =   RegisterDetailsModel.init(name: name, user_name: username, userId: id, email: email, password: password)
                RegisterService.sharedInstance.postApiDetails(registerDetails: reg)
         }else {
-            alertErrorNumberExist()
+            alertMessages(title: "Error", message: "Password Does Not Match")
+
         }
     }
     
     func signUpComplete() {
-        if signUpToken != nil && signUpToken != "" {
+        if signUpToken != ""  {
            rootDelgate?.loginSucceed()
-        }else {
-            alertErrorSignUpDetailerror()
-        }
+        }else  {
+            alertMessages(title: "Error", message: "SignUp not completed Server Error")
+            
+    }
     }
     
-//MARK:- CUSTOM TEXT FIELD CODE
-    
-//    func customTextFlied(){
-//
-//    let nameFieldLine = CALayer()
-//        nameFieldLine.frame = CGRect(x: 0, y: nameTextField.frame.height, width: 280, height: 2)
-//        nameFieldLine.backgroundColor = UIColor.black.cgColor
-////        removing border for textfield
-//        nameTextField.borderStyle = .none
-////        addLine to the textfield
-//        nameTextField.layer.addSublayer(nameFieldLine)
-//
-//        let usernameFieldLine = CALayer()
-//            usernameFieldLine.frame = CGRect(x: 0, y: usernameTextField.frame.height, width: 280, height: 2)
-//            usernameFieldLine.backgroundColor = UIColor.black.cgColor
-//    //        removing border for textfield
-//            usernameTextField.borderStyle = .none
-//    //        addLine to the textfield
-//            usernameTextField.layer.addSublayer(usernameFieldLine)
-//
-//        let emailFieldLine = CALayer()
-//            emailFieldLine.frame = CGRect(x: 0, y: emailTextField.frame.height, width: 280, height: 2)
-//            emailFieldLine.backgroundColor = UIColor.black.cgColor
-//    //        removing border for textfield
-//            emailTextField.borderStyle = .none
-//    //        addLine to the textfield
-//            emailTextField.layer.addSublayer(emailFieldLine)
-//
-//        let passwordFieldLine = CALayer()
-//            passwordFieldLine.frame = CGRect(x: 0, y: passwordTextField.frame.height, width: 280, height: 2)
-//            passwordFieldLine.backgroundColor = UIColor.black.cgColor
-//    //        removing border for textfield
-//            passwordTextField.borderStyle = .none
-//    //        addLine to the textfield
-//            passwordTextField.layer.addSublayer(passwordFieldLine)
-//
-//        let confirmPasswordFieldLine = CALayer()
-//            confirmPasswordFieldLine.frame = CGRect(x: 0, y: confirmPasswordTextField.frame.height, width: 280, height: 2)
-//            confirmPasswordFieldLine.backgroundColor = UIColor.black.cgColor
-//    //        removing border for textfield
-//            confirmPasswordTextField.borderStyle = .none
-//    //        addLine to the textfield
-//            confirmPasswordTextField.layer.addSublayer(confirmPasswordFieldLine)
-//    }
-    
-    func alertErrorNumberExist() {
-        let alert = UIAlertController(title: "Error", message: "Password Does Not Match", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
-            print("password and confirm password doesnot match")
-        }))
+
+    func alertMessages(title : String, message: String) {
+      let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
+          print("password and confirm password doesnot match")
+      }))
         present(alert, animated: true, completion: nil)
     }
-    
-    func alertErrorSignUpDetailerror() {
-        let alert = UIAlertController(title: "Error", message: "SginUp not completed Server Error", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
-            print("Responds is not getting fethched after signup details post request")
-        }))
-        present(alert, animated: true, completion: nil)
-    }
-    
 }
 extension SignUpDetailsViewController : PostRespondsSignInDetails {
     func ID(token: String?) {

@@ -896,11 +896,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confirmPasswordTextField" destination="S76-Jt-Rzf" id="Kd5-n8-NgK"/>
-                        <outlet property="emailTextField" destination="aW4-CS-udb" id="wrl-vZ-vly"/>
-                        <outlet property="nameTextField" destination="9mo-ii-2v9" id="Ack-hN-MNk"/>
-                        <outlet property="passwordTextField" destination="Ztu-jE-RIx" id="g5h-9S-exI"/>
-                        <outlet property="usernameTextField" destination="6bT-yX-e1C" id="ZRU-RC-b2a"/>
+                        <outlet property="confirmPasswordTextField" destination="S76-Jt-Rzf" id="RtM-g2-whC"/>
+                        <outlet property="emailTextField" destination="aW4-CS-udb" id="6P7-RP-0Dy"/>
+                        <outlet property="nameTextField" destination="9mo-ii-2v9" id="QmC-y7-tsE"/>
+                        <outlet property="passwordTextField" destination="Ztu-jE-RIx" id="i0N-5e-WFi"/>
+                        <outlet property="usernameTextField" destination="6bT-yX-e1C" id="HIz-45-6Bh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbS-v7-JVV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
